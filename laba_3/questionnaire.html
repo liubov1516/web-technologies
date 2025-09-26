@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<body>
+
+    <h1>Анкета користувача</h1>
+
+    <form action="questionnaire.html" method="get">
+        <fieldset>
+            <legend>1. Контактна інформація</legend>
+            
+            <p>
+                <label for="fullName">ПІБ:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Введіть повне ім'я" required tabindex="1" value="Іванов І.І.">
+            </p>
+            
+            <p>
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="user@example.com" required autocomplete="off" tabindex="2"
+                       pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$"
+                       title="Коректний email: user@domain.com" value="test@mail.com">
+            </p>
+            
+            <p>
+                <label for="userPassword">Пароль:</label>
+                <input type="password" id="userPassword" name="userPassword" placeholder="6 симв.: A-z, a-z, 0-9" required tabindex="3"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}"
+                       title="Пароль: 6 символів, містить цифру, малу та велику літери.">
+            </p>
+            
+            <p>
+                <label for="userPhone">Мобільний номер:</label>
+                <input type="tel" id="userPhone" name="userPhone" placeholder="+380XXXXXXXXX" tabindex="4"
+                       pattern="\+380[0-9]{9}"
+                       title="Формат: +380XXXXXXXXX" value="+380987654321">
+            </p>
+
+            <p>
+                <label for="birthDate">Дата народження:</label>
+                <input type="date" id="birthDate" name="birthDate" tabindex="5" value="1990-01-01">
+            </p>
+
+            <p>
+                <label for="comments">Коментарі:</label>
+                <textarea id="comments" name="comments" rows="3" cols="40" placeholder="Ваші коментарі тут..." tabindex="6">тестування</textarea>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Вибори та списки</legend>
+
+            <p>
+                <label>Ваш вік:</label>
+                <span tabindex="7">
+                    <label><input type="radio" name="ageGroup" value="under20"> до 20</label>
+                    <label><input type="radio" name="ageGroup" value="20-40"> 20-40</label>
+                    <label><input type="radio" name="ageGroup" value="over40"> 40+</label>
+                </span>
+            </p>
+
+            <p>
+                <label>Бажаний формат роботи:</label>
+                <span tabindex="8">
+                    <label><input type="radio" name="workFormat" value="office"> Офіс</label>
+                    <label><input type="radio" name="workFormat" value="remote" checked> Віддалено</label>
+                    <label><input type="radio" name="workFormat" value="hybrid"> Гібрид</label>
+                </span>
+            </p>
+
+            <p>
+                <label>Якими технологіями володієте:</label>
+                <span tabindex="9">
+                    <label><input type="checkbox" name="techSkills" value="html"> HTML</label>
+                    <label><input type="checkbox" name="techSkills" value="css"> CSS</label>
+                    <label><input type="checkbox" name="techSkills" value="js"> JavaScript</label>
+                    <label><input type="checkbox" name="techSkills" value="sql"> SQL</label>
+                </span>
+            </p>
+            
+            <p>
+                <label for="city">Місто:</label>
+                <select id="city" name="city" tabindex="10">
+                    <option value="kyiv">Київ</option>
+                    <option value="lviv">Львів</option>
+                    <option value="odesa" selected>Чернівці</option>
+                    <option value="dnipro">Дніпро</option>
+                    <option value="kharkiv">Харків</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="hobbies">Хобі:</label>
+                <select id="hobbies" name="hobbies" multiple size="4" tabindex="11">
+                    <option value="sport">Спорт</option>
+                    <option value="music">Музика</option>
+                    <option value="reading">Читання</option>
+                    <option value="travel">Подорожі</option>
+                    <option value="coding">Кодування</option>
+                    <option value="art">Мистецтво</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="department">Відділ:</label>
+                <select id="department" name="department" tabindex="12">
+                    <optgroup label="Розробка">
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="devops">DevOps</option>
+                    </optgroup>
+                    <optgroup label="Дизайн">
+                        <option value="ui">UI</option>
+                        <option value="ux">UX</option>
+                        <option value="graphic">Графічний</option>
+                    </optgroup>
+                    <optgroup label="Менеджмент">
+                        <option value="pm">Project Manager</option>
+                        <option value="hr">HR</option>
+                        <option value="ceo">CEO</option>
+                    </optgroup>
+                    <optgroup label="Підтримка">
+                        <option value="support">Технічна підтримка</option>
+                        <option value="qa">QA</option>
+                        <option value="legal">Юридичний</option>
+                    </optgroup>
+                </select>
+            </p>
+            
+            <p>
+                <label for="tool">Улюблений інструмент:</label>
+                <input list="tools" id="tool" name="tool" placeholder="Оберіть або введіть свій" tabindex="13">
+                <datalist id="tools">
+                    <option value="VS Code">
+                    <option value="Sublime Text">
+                    <option value="WebStorm">
+                    <option value="Notepad++">
+                </datalist>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>3. Кнопки та дії</legend>
+
+            <button type="submit" tabindex="14">Надіслати</button>
+            <button type="reset" tabindex="15">Скинути форму</button>
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <form action="questionnaire.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>4. Завантаження файлів</legend>
+
+            <p>
+                <label for="audioUpload">Завантажити аудіофайли:</label>
+                <input type="file" id="audioUpload" name="userAudio[]" accept="audio/*" multiple tabindex="16">
+            </p>
+
+            <button type="submit" tabindex="17">Надіслати</button>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

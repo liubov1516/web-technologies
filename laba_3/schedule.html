@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Розклад занять та активностей</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .anchor-list {
+            margin-bottom: 30px;
+        }
+        
+        .header-bg { background-color: #00bcd4; color: white; }
+        .table-bg { background-color: #e0f7fa; } 
+
+        .empty-cell {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Дні тижня:</h1>
+        <ul class="anchor-list" type="square">
+            <li><a href="#monday">Понеділок</a></li>
+            <li><a href="#tuesday">Вівторок</a></li>
+            <li><a href="#wednesday">Середа</a></li>
+            <li><a href="#thursday">Четвер</a></li>
+            <li><a href="#friday">П'ятниця</a></li>
+            <li><a href="#saturday">Субота</a></li>
+            <li><a href="#sunday">Неділя</a></li>
+        </ul>
+
+        <h3 id="monday">Понеділок</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="80%" align="center" class="table-bg">
+            <caption>Розклад понеділка (за двома тижнями)</caption>
+            <thead>
+                <tr>
+                    <th class="header-bg">Час</th>
+                    <th class="header-bg">Непарний тиждень</th>
+                    <th class="header-bg">Парний тиждень</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>9:50 - 11:10</td><td>Моделювання та оптимізація систем</td><td>Моделювання та оптимізація систем</td></tr>
+                <tr><td>11:30 - 12:50</td><td>Філософія (лекція)</td><td>Професійна практика програмної інженерії</td></tr>
+                <tr><td>13:00 - 14:20</td><td class="empty-cell">&nbsp;</td><td>Філософія</td></tr>
+            </tbody>
+        </table>
+        <div style="margin: 20px 0;"> 
+            <img src="images/monday.jpg" alt="Зображення для Понеділка" width="400" height="400">
+        </div>
+
+        <h3 id="tuesday">Вівторок</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="80%" align="center" class="table-bg">
+            <caption>Розклад вівторка (за двома тижнями)</caption>
+            <thead>
+                <tr><th class="header-bg">Час</th><th class="header-bg">Непарний тиждень</th><th class="header-bg">Парний тиждень</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>8:20 - 9:40</td><td class="empty-cell">&nbsp;</td><td>ПКПЗ (лекція)</td></tr>
+                <tr><td>9:50 - 11:10</td><td>Операційні системи</td><td>Операційні системи</td></tr>
+                <tr><td>11:30 - 12:50</td><td>ПППІ (лекція)</td><td>ПППІ (лекція)</td></tr>
+                <tr><td>13:00 - 14:20</td><td>ПКПЗ</td><td>ПКПЗ</td></tr>
+            </tbody>
+        </table>
+        <div style="margin: 20px 0;">
+            <img src="images/tuesday.jpg" alt="Зображення для Вівторка" width="400" height="400">
+        </div>
+        
+        <h3 id="wednesday">Середа</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="80%" align="center" class="table-bg">
+            <caption>Розклад середи (за двома тижнями)</caption>
+            <thead>
+                <tr><th class="header-bg">Час</th><th class="header-bg">Непарний тиждень</th><th class="header-bg">Парний тиждень</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>8:20 - 9:40</td><td>ПППІ</td><td class="empty-cell">&nbsp;</td></tr>
+                <tr><td>9:50 - 11:10</td><td>Веб-технології (лекція)</td><td>Веб-технології (лекція)</td></tr>
+                <tr><td>11:30 - 12:50</td><td class="empty-cell">&nbsp;</td><td>Моделювання та оптимізація систем</td></tr>
+                <tr><td>13:00 - 14:20</td><td class="empty-cell">&nbsp;</td><td class="empty-cell">&nbsp;</td></tr>
+            </tbody>
+        </table>
+        <div style="margin: 20px 0;">
+            <img src="images/wednesday.jpg" alt="Зображення для Середи" width="400" height="400">
+        </div>
+        
+        <h3 id="thursday">Четвер</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="80%" align="center" class="table-bg">
+            <caption>Розклад четверга (за двома тижнями)</caption>
+            <thead>
+                <tr><th class="header-bg">Час</th><th class="header-bg">Непарний тиждень</th><th class="header-bg">Парний тиждень</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>8:20 - 9:40</td><td>ПКПЗ (лекція)</td><td>ПКПЗ (лекція)</td></tr>
+                <tr><td>9:50 - 11:10</td><td>Моделювання та оптимізація систем (лекція)</td><td>Моделювання та оптимізація систем (лекція)</td></tr>
+                <tr><td>11:30 - 12:50</td><td class="empty-cell">&nbsp;</td><td class="empty-cell">&nbsp;</td></tr>
+                <tr><td>13:00 - 14:20</td><td class="empty-cell">&nbsp;</td><td class="empty-cell">&nbsp;</td></tr>
+            </tbody>
+        </table>
+        <div style="margin: 20px 0;">
+            <img src="images/thursday.jpg" alt="Зображення для Четверга" width="400" height="400">
+        </div>
+        
+        <h3 id="friday">П'ятниця</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="80%" align="center" class="table-bg">
+            <caption>Розклад п'ятниці (за двома тижнями)</caption>
+            <thead>
+                <tr><th class="header-bg">Час</th><th class="header-bg">Непарний тиждень</th><th class="header-bg">Парний тиждень</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>13:00 - 14:20</td><td>Веб-технології</td><td>Веб-технології</td></tr>
+                <tr><td>14:40 - 16:00</td><td>Операційні системи</td><td>Операційні системи</td></tr>
+            </tbody>
+        </table>
+        <div style="margin: 20px 0;">
+            <img src="images/friday.jpg" alt="Зображення для П'ятниці" width="400" height="400">
+        </div>
+
+        <h3 id="saturday">Субота</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="80%" align="center" class="table-bg">
+            <caption>Розклад вільного часу студента</caption>
+            <thead>
+                <tr><th class="header-bg">Час</th><th class="header-bg">Активність</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>10:00 - 12:00</td><td>Сон</td></tr>
+                <tr><td>13:00 - 14:00</td><td>Сніданок</td></tr>
+                <tr><td>14:00 - 16:00</td><td>Вивчення дз</td></tr>
+                <tr><td>16:00 - 18:00</td><td>Серіал</td></tr>
+                <tr><td>18:00 - 22:00</td><td>ДЗ</td></tr>
+            </tbody>
+        </table>
+        <div style="margin: 20px 0;">
+            <img src="images/saturday.jpg" alt="Зображення для Суботи" width="400" height="400">
+        </div>
+
+        <h3 id="sunday">Неділя</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="80%" align="center" class="table-bg">
+            <caption>Розклад вихідного дня студента</caption>
+            <thead>
+                <tr><th class="header-bg">Час</th><th class="header-bg">Активність</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>10:00 - 11:00</td><td>Сніданок</td></tr>
+                <tr><td>15:00 - 18:00</td><td>Відпочинок</td></tr>
+            </tbody>
+        </table>
+        <div style="margin: 20px 0;">
+            <img src="images/sunday.jpg" alt="Зображення для Неділі" width="400" height="400">
+        </div>
+
+        <hr>
+        <a href="index.html">Повернутись на головну</a>
+    </div>
+
+</body>
+</html>
