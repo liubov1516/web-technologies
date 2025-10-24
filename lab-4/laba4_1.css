@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    word-spacing:normal;
+}
+p {
+    color: green;
+    text-align: center;
+
+}
+div {
+    margin: auto;
+}
+
+.red {
+    color: red;
+}
+
+.wrap {
+    white-space: nowrap;
+}
+
+#P-shadow{
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgb(201, 50, 50);
+}
+.shadow {
+    text-shadow: -5px -5px 3px red;
+}
+.cross {
+    text-decoration:line-through;
+    text-transform: capitalize;
+    text-indent: 50px;
+}
+
+.interval {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
