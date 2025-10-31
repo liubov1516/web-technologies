@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета користувача</title>
+    <link rel="stylesheet" href="lab5_3.css">
+</head>
+<body>
+
+<h1>Анкета користувача</h1>
+
+<form action="questionnaire.html" method="get" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>1. Контактна інформація</legend>
+
+        <label for="fullName">ПІБ:</label><br>
+        <input type="text" id="fullName" name="fullName" placeholder="Введіть повне ім'я" tabindex="1" value="Іванов І.І." disabled><br>
+
+        <label for="userEmail">Email:</label><br>
+        <input type="email" id="userEmail" name="userEmail" placeholder="user@example.com" tabindex="2"
+               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$"
+               title="Коректний email: user@domain.com" value="test@mail.com"><br>
+
+        <label for="userPassword">Пароль:</label><br>
+        <input type="password" id="userPassword" name="userPassword" placeholder="6 симв.: A-z, a-z, 0-9" tabindex="3"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}"
+               title="Пароль: 6 символів, містить цифру, малу та велику літери."><br>
+
+        <label for="userPhone">Мобільний номер:</label><br>
+        <input type="tel" id="userPhone" name="userPhone" placeholder="+380XXXXXXXXX" tabindex="4"
+               pattern="\+380[0-9]{9}" title="Формат: +380XXXXXXXXX" value="+380987654321"><br>
+
+        <label for="birthDate">Дата народження:</label><br>
+        <input type="date" id="birthDate" name="birthDate" tabindex="5" value="1990-01-01"><br>
+
+        <label for="comments">Коментарі:</label><br>
+        <textarea id="comments" name="comments" rows="3" placeholder="Ваші коментарі тут..." tabindex="6">коментар</textarea><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>2. Вибори та списки</legend>
+
+        <label>Ваш вік:</label><br>
+        <input type="radio" name="ageGroup" value="under20" tabindex="7"> до 20
+        <input type="radio" name="ageGroup" value="20-40" tabindex="8"> 20-40
+        <input type="radio" name="ageGroup" value="over40" tabindex="9"> 40+<br><br>
+
+        <label>Бажаний формат роботи:</label><br>
+        <input type="radio" name="workFormat" value="office" tabindex="10"> Офіс
+        <input type="radio" name="workFormat" value="remote" checked tabindex="11"> Віддалено
+        <input type="radio" name="workFormat" value="hybrid" tabindex="12"> Гібрид<br><br>
+
+        <label>Технології, якими володієте:</label><br>
+        <input type="checkbox" name="techSkills" value="html" tabindex="13"> HTML
+        <input type="checkbox" name="techSkills" value="css" tabindex="14"> CSS
+        <input type="checkbox" name="techSkills" value="js" tabindex="15"> JavaScript
+        <input type="checkbox" name="techSkills" value="sql" tabindex="16"> SQL<br><br>
+
+        <label for="city">Місто:</label><br>
+        <select id="city" name="city" tabindex="17">
+            <option value="kyiv">Київ</option>
+            <option value="lviv">Львів</option>
+            <option value="odesa" selected>Чернівці</option>
+            <option value="dnipro">Дніпро</option>
+            <option value="kharkiv">Харків</option>
+        </select><br><br>
+
+        <label for="hobbies">Хобі:</label><br>
+        <select id="hobbies" name="hobbies" multiple size="4" tabindex="18">
+            <option value="sport">Спорт</option>
+            <option value="music">Музика</option>
+            <option value="reading">Читання</option>
+            <option value="travel">Подорожі</option>
+            <option value="coding">Кодування</option>
+            <option value="art">Мистецтво</option>
+        </select><br><br>
+
+        <label for="department">Відділ:</label><br>
+        <select id="department" name="department" tabindex="19">
+            <optgroup label="Розробка">
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="devops">DevOps</option>
+            </optgroup>
+            <optgroup label="Дизайн">
+                <option value="ui">UI</option>
+                <option value="ux">UX</option>
+                <option value="graphic">Графічний</option>
+            </optgroup>
+            <optgroup label="Менеджмент">
+                <option value="pm">Project Manager</option>
+                <option value="hr">HR</option>
+                <option value="ceo">CEO</option>
+            </optgroup>
+            <optgroup label="Підтримка">
+                <option value="support">Технічна підтримка</option>
+                <option value="qa">QA</option>
+                <option value="legal">Юридичний</option>
+            </optgroup>
+        </select><br><br>
+
+        <label for="tool">Улюблений інструмент:</label><br>
+        <input list="tools" id="tool" name="tool" placeholder="Оберіть або введіть свій" tabindex="20">
+        <datalist id="tools">
+            <option value="VS Code">
+            <option value="Sublime Text">
+            <option value="WebStorm">
+            <option value="Notepad++">
+        </datalist><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>3. Завантаження файлів та коментарі</legend>
+
+        <label for="audioUpload">Завантажте аудіофайли:</label><br>
+        <input type="file" id="audioUpload" name="userAudio[]" accept="audio/*" multiple tabindex="21"><br><br>
+
+        <label for="comment">Коментар:</label><br>
+        <textarea id="comment" name="comment" rows="4" placeholder="Ваші побажання..." tabindex="22"></textarea><br><br>
+
+        <button type="submit" tabindex="23" onclick="this.disabled=true; this.innerText='Відправка...'">Відправити</button>
+        <button type="reset" tabindex="24">Очистити</button>
+    </fieldset>
+
+</form>
+
+</body>
+</html>
